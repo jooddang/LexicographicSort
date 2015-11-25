@@ -8,3 +8,7 @@
   - Return: a sorted list of strList in order of lexicoIndex
   - Example: 
     - lexicographicSort(['c', '', 'dc', 'd'], 'dc') -> ['', 'd', 'dc', 'c']
+  - Time complexity
+    - building binary search tree: It depends on the height of the tree. The worst case would be a fully skewed tree, in which case complexity will be O(n), when n equals to the length of the strList. Or, best case would be complete binary tree with complexity of O(log n) I assume that length of lexicoIndex is relatively smaller than length of strList so that I can ignore. If not, complexity would increase at the comparison function (isGreaterThan()).
+    - In-order traversal of the tree: It traverses all elements of the list, thus complexity is O(n), when n equals to the length of the strList.
+    - Overall, the complexity is bounded in O(n).
